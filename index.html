@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Barsotti | EdTech & Design</title>
+    
+    <!-- Tailwind CSS for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Plus Jakarta Sans for a modern, geometric tech feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        // Custom accent color palette (Indigo/Violet vibe)
+                        accent: {
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                        },
+                        dark: {
+                            bg: '#0a0a0a',
+                            surface: '#171717',
+                            border: '#262626'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom gradient text utility */
+        .text-gradient {
+            background: linear-gradient(to right, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        body {
+            background-color: #0a0a0a; /* Matches dark.bg */
+            color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-accent-500 selection:text-white flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 bg-dark-bg/80 backdrop-blur-md border-b border-dark-border">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center">
+            
+            <!-- Left: Logo -->
+            <div class="flex-1 flex justify-start">
+                <a href="#" class="text-2xl font-bold tracking-tighter hover:text-accent-400 transition-colors">
+                    db<span class="text-accent-500">.</span>
+                </a>
+            </div>
+            
+            <!-- Center: Navigation -->
+            <nav class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+                <a href="#" class="text-white transition-colors">Home</a>
+            </nav>
+
+            <!-- Right: CTA Button -->
+            <div class="flex-1 flex justify-end">
+                <a href="#contact" class="hidden md:inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-accent-600 rounded-lg hover:bg-accent-500 transition-colors">
+                    Collaborate
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="flex-grow pt-24">
+        <!-- Hero Section -->
+        <section id="hero" class="relative px-6 py-32 md:py-48 flex items-center justify-center overflow-hidden">
+            <!-- Subtle background glow effect -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent-600/20 rounded-full blur-[120px] -z-10"></div>
+            
+            <div class="max-w-4xl mx-auto text-center z-10">
+                <h2 class="text-accent-400 font-medium tracking-wide uppercase text-sm mb-4">Daniel Barsotti &mdash; Educational Technologist</h2>
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
+                    Shaping the future of <br class="hidden md:block" />
+                    <span class="text-gradient">digital learning.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    I design intuitive, engaging, and highly effective educational experiences by merging pedagogical theory with cutting-edge technology.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#work" class="w-full sm:w-auto px-8 py-4 bg-white text-black font-bold rounded-lg hover:bg-gray-200 transition-colors text-center">
+                        Explore My Work
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carousel Section -->
+        <section id="specialties" class="py-12 px-6 relative z-20">
+            <div class="max-w-6xl mx-auto relative group">
+                <!-- Carousel Container -->
+                <div class="overflow-hidden rounded-2xl border border-dark-border bg-dark-surface/50 backdrop-blur-sm relative h-[500px] md:h-[400px]">
+                    <div id="carousel-track" class="flex transition-transform duration-700 ease-in-out h-full">
+                        <!-- Slide 1 -->
+                        <div class="min-w-full h-full flex flex-col md:flex-row items-center p-8 md:p-12 gap-8">
+                            <div class="w-full md:w-1/3 h-48 md:h-full relative rounded-xl overflow-hidden shrink-0 border border-dark-border">
+                                <img src="https://placehold.co/400x600/171717/818cf8?text=Photo+1" alt="Instructional Design" class="absolute inset-0 w-full h-full object-cover">
+                            </div>
+                            <div class="flex-grow">
+                                <h3 class="text-accent-400 font-bold uppercase tracking-wider text-sm mb-2">Specialty 01</h3>
+                                <h2 class="text-3xl md:text-4xl font-bold mb-4">Instructional Design</h2>
+                                <p class="text-gray-400 text-lg leading-relaxed">I craft engaging, learner-centric experiences by blending cognitive science with intuitive design, ensuring complex topics become accessible and memorable.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="min-w-full h-full flex flex-col md:flex-row items-center p-8 md:p-12 gap-8">
+                            <div class="w-full md:w-1/3 h-48 md:h-full relative rounded-xl overflow-hidden shrink-0 border border-dark-border">
+                                <img src="https://placehold.co/400x600/171717/818cf8?text=Photo+2" alt="Ethical AI" class="absolute inset-0 w-full h-full object-cover">
+                            </div>
+                            <div class="flex-grow">
+                                <h3 class="text-accent-400 font-bold uppercase tracking-wider text-sm mb-2">Specialty 02</h3>
+                                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ethical AI Curriculum</h2>
+                                <p class="text-gray-400 text-lg leading-relaxed">Guiding organizations through the AI transition with robust frameworks that prioritize transparency, bias mitigation, and human-in-the-loop workflows.</p>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="min-w-full h-full flex flex-col md:flex-row items-center p-8 md:p-12 gap-8">
+                            <div class="w-full md:w-1/3 h-48 md:h-full relative rounded-xl overflow-hidden shrink-0 border border-dark-border">
+                                <img src="https://placehold.co/400x600/171717/818cf8?text=Photo+3" alt="Interactive Media" class="absolute inset-0 w-full h-full object-cover">
+                            </div>
+                            <div class="flex-grow">
+                                <h3 class="text-accent-400 font-bold uppercase tracking-wider text-sm mb-2">Specialty 03</h3>
+                                <h2 class="text-3xl md:text-4xl font-bold mb-4">Interactive Media</h2>
+                                <p class="text-gray-400 text-lg leading-relaxed">Developing bespoke simulations and scenarios using modern web technologies to increase retention and provide safe environments for practice.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Controls -->
+                    <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-dark-bg/80 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-accent-600 border border-dark-border z-10">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-dark-bg/80 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-accent-600 border border-dark-border z-10">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+                    
+                    <!-- Dots -->
+                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+                        <button onclick="goToSlide(0)" class="carousel-dot w-2 h-2 rounded-full bg-white scale-125 shadow-[0_0_8px_rgba(255,255,255,0.8)] transition-all"></button>
+                        <button onclick="goToSlide(1)" class="carousel-dot w-2 h-2 rounded-full bg-white/30 transition-all"></button>
+                        <button onclick="goToSlide(2)" class="carousel-dot w-2 h-2 rounded-full bg-white/30 transition-all"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="py-24 px-6 border-t border-dark-border bg-dark-bg/50">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex items-center gap-4 mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Client Feedback</h2>
+                    <div class="h-[1px] flex-grow bg-gradient-to-r from-dark-border to-transparent"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Review 1 -->
+                    <div class="p-8 bg-dark-surface border border-dark-border rounded-xl hover:border-accent-500/30 transition-all duration-300 relative group">
+                        <div class="absolute top-6 right-6 text-accent-600/20 group-hover:text-accent-500/40 transition-colors">
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                        </div>
+                        <p class="text-gray-400 mb-8 relative z-10 leading-relaxed">
+                            "Daniel completely transformed our onboarding curriculum. His approach to cognitive load makes complex AI concepts incredibly intuitive for our non-technical staff."
+                        </p>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-accent-400 to-accent-600 flex items-center justify-center text-white font-bold">
+                                SJ
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">Sarah Jenkins</h4>
+                                <p class="text-xs text-accent-400 uppercase tracking-wider">Director of EdTech, InnovateEd</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="p-8 bg-dark-surface border border-dark-border rounded-xl hover:border-accent-500/30 transition-all duration-300 relative group">
+                        <div class="absolute top-6 right-6 text-accent-600/20 group-hover:text-accent-500/40 transition-colors">
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                        </div>
+                        <p class="text-gray-400 mb-8 relative z-10 leading-relaxed">
+                            "Working with Daniel is a seamless experience. He doesn't just build courses; he architects experiences that genuinely keep adult learners engaged from start to finish."
+                        </p>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-700 to-gray-600 flex items-center justify-center text-white font-bold">
+                                MR
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">Marcus Reed</h4>
+                                <p class="text-xs text-accent-400 uppercase tracking-wider">Lead Designer, NextGen</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="p-8 bg-dark-surface border border-dark-border rounded-xl hover:border-accent-500/30 transition-all duration-300 relative group">
+                        <div class="absolute top-6 right-6 text-accent-600/20 group-hover:text-accent-500/40 transition-colors">
+                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                        </div>
+                        <p class="text-gray-400 mb-8 relative z-10 leading-relaxed">
+                            "The interactive scenarios he developed for our team increased knowledge retention by 40%. He is a rare blend of strong pedagogical theory and top-tier technical execution."
+                        </p>
+                        <div class="flex items-center gap-4 mt-auto">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gray-700 to-gray-600 flex items-center justify-center text-white font-bold">
+                                EL
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">Elena Lin</h4>
+                                <p class="text-xs text-accent-400 uppercase tracking-wider">VP of Training, GlobalCorp</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Highlighted Work Section -->
+        <section id="work" class="py-24 px-6 border-t border-dark-border">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex items-center gap-4 mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold">Highlighted Work</h2>
+                    <div class="h-[1px] flex-grow bg-gradient-to-r from-dark-border to-transparent"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Project 1 -->
+                    <a href="#" class="group block bg-dark-surface border border-dark-border rounded-xl overflow-hidden hover:border-accent-500/50 transition-all duration-300">
+                        <div class="h-64 bg-dark-bg relative overflow-hidden">
+                            <!-- Placeholder Image -->
+                            <img src="https://placehold.co/800x600/171717/818cf8?text=Project+One" alt="Project 1" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex gap-2 mb-4">
+                                <span class="px-3 py-1 text-xs font-medium bg-accent-600/10 text-accent-400 rounded-full border border-accent-600/20">Instructional Design</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-dark-bg text-gray-400 rounded-full border border-dark-border">Figma</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-accent-400 transition-colors">AI Onboarding Curriculum</h3>
+                            <p class="text-gray-400 leading-relaxed mb-6">Designed a comprehensive learning path that demystifies machine learning models and ethics for non-technical enterprise teams.</p>
+                            <span class="inline-flex items-center gap-2 text-accent-500 font-medium group-hover:translate-x-2 transition-transform">
+                                View Case Study <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Project 2 -->
+                    <a href="#" class="group block bg-dark-surface border border-dark-border rounded-xl overflow-hidden hover:border-accent-500/50 transition-all duration-300">
+                        <div class="h-64 bg-dark-bg relative overflow-hidden">
+                            <!-- Placeholder Image -->
+                            <img src="https://placehold.co/800x600/171717/818cf8?text=Project+Two" alt="Project 2" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-8">
+                            <div class="flex gap-2 mb-4">
+                                <span class="px-3 py-1 text-xs font-medium bg-accent-600/10 text-accent-400 rounded-full border border-accent-600/20">Interactive Media</span>
+                                <span class="px-3 py-1 text-xs font-medium bg-dark-bg text-gray-400 rounded-full border border-dark-border">React</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-3 group-hover:text-accent-400 transition-colors">Virtual Lab Environment</h3>
+                            <p class="text-gray-400 leading-relaxed mb-6">A 3D browser-based simulation built to allow university students to practice complex physical lab protocols safely.</p>
+                            <span class="inline-flex items-center gap-2 text-accent-500 font-medium group-hover:translate-x-2 transition-transform">
+                                View Case Study <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 px-6 border-t border-dark-border relative overflow-hidden">
+            <!-- Subtle background glow -->
+            <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-accent-600/10 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">Ready to <span class="text-gradient">collaborate?</span></h2>
+                    <p class="text-gray-400 text-lg">Whether you have a specific project in mind or just want to discuss the future of digital learning, my inbox is open.</p>
+                </div>
+
+                <form class="bg-dark-surface/50 border border-dark-border backdrop-blur-md p-8 md:p-10 rounded-2xl shadow-xl">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-400 mb-2">Name</label>
+                            <input type="text" id="name" class="w-full bg-dark-bg border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-500 focus:ring-1 focus:ring-accent-500 transition-colors" placeholder="Jane Doe">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-400 mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full bg-dark-bg border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-500 focus:ring-1 focus:ring-accent-500 transition-colors" placeholder="jane@example.com">
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex justify-between items-end mb-2">
+                            <label for="message" class="block text-sm font-medium text-gray-400">Message</label>
+                        </div>
+                        <textarea id="message" rows="5" class="w-full bg-dark-bg border border-dark-border rounded-lg px-4 py-3 text-white focus:outline-none focus:border-accent-500 focus:ring-1 focus:ring-accent-500 transition-colors resize-y" placeholder="Write your message here..."></textarea>
+                    </div>
+                    <button type="button" class="w-full bg-accent-600 hover:bg-accent-500 text-white font-bold py-4 rounded-lg transition-colors flex justify-center items-center gap-2 group">
+                        Send Message
+                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-bg border-t border-dark-border py-8 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+            <div>
+                &copy; <script>document.write(new Date().getFullYear())</script> Daniel Barsotti. Designed and hand-coded.
+            </div>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-accent-400 transition-colors">LinkedIn</a>
+                <a href="#" class="hover:text-accent-400 transition-colors">GitHub</a>
+                <a href="#" class="hover:text-accent-400 transition-colors">Twitter / X</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Navigation Menu -->
+    <div class="fixed bottom-6 left-6 z-50 flex flex-col-reverse items-start gap-4">
+        <!-- Main FAB Button -->
+        <button onclick="toggleFabMenu()" class="w-14 h-14 bg-accent-600 hover:bg-accent-500 text-white rounded-full shadow-xl flex items-center justify-center transition-transform hover:scale-105 border border-accent-400/30 group">
+            <svg id="fab-icon-menu" class="w-6 h-6 transition-opacity duration-300 absolute" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            <svg id="fab-icon-close" class="w-6 h-6 opacity-0 transition-opacity duration-300 absolute" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+
+        <!-- Menu Items -->
+        <div id="fab-menu" class="hidden flex-col gap-2 bg-dark-surface/95 backdrop-blur-md border border-dark-border p-3 rounded-2xl shadow-2xl origin-bottom-left transition-all duration-300 scale-95 opacity-0 mb-2">
+            <a href="#hero" onclick="toggleFabMenu()" class="text-sm font-medium text-gray-300 hover:text-white hover:bg-dark-border px-4 py-2.5 rounded-lg transition-colors flex items-center gap-3">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg> Intro
+            </a>
+            <a href="#specialties" onclick="toggleFabMenu()" class="text-sm font-medium text-gray-300 hover:text-white hover:bg-dark-border px-4 py-2.5 rounded-lg transition-colors flex items-center gap-3">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg> Specialties
+            </a>
+            <a href="#reviews" onclick="toggleFabMenu()" class="text-sm font-medium text-gray-300 hover:text-white hover:bg-dark-border px-4 py-2.5 rounded-lg transition-colors flex items-center gap-3">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.514"></path></svg> Reviews
+            </a>
+            <a href="#work" onclick="toggleFabMenu()" class="text-sm font-medium text-gray-300 hover:text-white hover:bg-dark-border px-4 py-2.5 rounded-lg transition-colors flex items-center gap-3">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> Work
+            </a>
+            <a href="#contact" onclick="toggleFabMenu()" class="text-sm font-medium text-gray-300 hover:text-white hover:bg-dark-border px-4 py-2.5 rounded-lg transition-colors flex items-center gap-3">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg> Contact
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Carousel JavaScript Logic
+        let currentSlide = 0;
+        const totalSlides = 3;
+        const track = document.getElementById('carousel-track');
+        const dots = document.querySelectorAll('.carousel-dot');
+        let autoAdvanceTimer;
+        const autoAdvanceInterval = 30000; // 30,000 milliseconds = 30 seconds
+
+        function updateCarousel() {
+            // Slide the track horizontally
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            
+            // Update dot visual states
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.remove('bg-white/30');
+                    dot.classList.add('bg-white', 'scale-125', 'shadow-[0_0_8px_rgba(255,255,255,0.8)]');
+                } else {
+                    dot.classList.remove('bg-white', 'scale-125', 'shadow-[0_0_8px_rgba(255,255,255,0.8)]');
+                    dot.classList.add('bg-white/30');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+            resetTimer();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+            resetTimer();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+            resetTimer();
+        }
+
+        function resetTimer() {
+            // Clears the timer and restarts it from zero so it doesn't auto-flip right after a manual click
+            clearInterval(autoAdvanceTimer);
+            autoAdvanceTimer = setInterval(nextSlide, autoAdvanceInterval);
+        }
+
+        // Start the timer immediately when the page loads
+        autoAdvanceTimer = setInterval(nextSlide, autoAdvanceInterval);
+
+        // Floating Menu JS Logic
+        function toggleFabMenu() {
+            const menu = document.getElementById('fab-menu');
+            const iconMenu = document.getElementById('fab-icon-menu');
+            const iconClose = document.getElementById('fab-icon-close');
+            
+            if (menu.classList.contains('hidden')) {
+                // Open the menu
+                menu.classList.remove('hidden');
+                // Timeout allows the display property to apply before animating opacity/scale
+                setTimeout(() => {
+                    menu.classList.remove('scale-95', 'opacity-0');
+                    menu.classList.add('scale-100', 'opacity-100');
+                }, 10);
+                
+                // Animate icons
+                iconMenu.classList.remove('opacity-100');
+                iconMenu.classList.add('opacity-0');
+                iconClose.classList.remove('opacity-0');
+                iconClose.classList.add('opacity-100');
+            } else {
+                // Close the menu
+                menu.classList.remove('scale-100', 'opacity-100');
+                menu.classList.add('scale-95', 'opacity-0');
+                
+                // Animate icons
+                iconMenu.classList.remove('opacity-0');
+                iconMenu.classList.add('opacity-100');
+                iconClose.classList.remove('opacity-100');
+                iconClose.classList.add('opacity-0');
+                
+                // Wait for the transition to finish before applying 'hidden'
+                setTimeout(() => {
+                    menu.classList.add('hidden');
+                }, 300);
+            }
+        }
+    </script>
+
+</body>
+</html>
