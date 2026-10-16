@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Samples | Daniel Barsotti</title>
+    
+    <!-- Tailwind CSS for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        accent: {
+                            400: '#818cf8',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                        },
+                        dark: {
+                            bg: '#0a0a0a',
+                            surface: '#171717',
+                            border: '#262626'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .text-gradient {
+            background: linear-gradient(to right, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        body {
+            background-color: #0a0a0a;
+            color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-accent-500 selection:text-white flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 bg-dark-bg/80 backdrop-blur-md border-b border-dark-border">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center">
+            
+            <!-- Left: Logo -->
+            <div class="flex-1 flex justify-start">
+                <a href="index.html" class="text-2xl font-bold tracking-tighter hover:text-accent-400 transition-colors">
+                    db<span class="text-accent-500">.</span>
+                </a>
+            </div>
+            
+            <!-- Center: Navigation -->
+            <nav class="hidden md:flex flex-1 justify-center gap-8 text-sm font-medium">
+                <a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a>
+                <a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a>
+                <a href="work.html" class="text-white border-b-2 border-accent-500 pb-1">Work</a>
+            </nav>
+
+            <!-- Right: CTA Button -->
+            <div class="flex-1 flex justify-end">
+                <a href="index.html#contact" class="hidden md:inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium text-white bg-accent-600 rounded-lg hover:bg-accent-500 transition-colors">
+                    Collaborate
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="flex-grow pt-32 pb-24 relative overflow-hidden">
+        
+        <!-- Background Ambient Glow -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-accent-600/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <!-- Page Header -->
+            <div class="mb-16 text-center md:text-left">
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
+                    Selected <span class="text-gradient">Work.</span>
+                </h1>
+                <p class="text-xl text-gray-400 max-w-2xl leading-relaxed">
+                    A collection of digital learning experiences, instructional frameworks, and technical implementations designed to elevate education.
+                </p>
+            </div>
+
+            <!-- Project Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1: Ethical AI -->
+                <article class="group flex flex-col bg-dark-surface/50 backdrop-blur-md border border-dark-border rounded-2xl overflow-hidden hover:border-accent-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.1)] transition-all duration-300">
+                    <div class="h-60 bg-dark-bg relative overflow-hidden border-b border-dark-border">
+                        <img src="https://placehold.co/800x600/171717/818cf8?text=Ethical+AI+Curriculum" alt="Ethical AI Curriculum" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="px-3 py-1 text-xs font-semibold bg-accent-600/10 text-accent-400 rounded-full border border-accent-600/20">#Rise360</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-dark-bg text-gray-400 rounded-full border border-dark-border">#Storyline</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-dark-bg text-gray-400 rounded-full border border-dark-border">#EdTech</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 group-hover:text-accent-400 transition-colors">Ethical AI in Higher Education</h3>
+                        <p class="text-gray-400 leading-relaxed mb-8 flex-grow">
+                            A comprehensive 4-module e-learning curriculum built in Rise 360. This project successfully migrated and modernized a legacy 50+ slide Storyline course, drastically improving accessibility and cognitive flow.
+                        </p>
+                        <a href="case-study.html" class="inline-flex items-center gap-2 text-accent-500 font-semibold group-hover:translate-x-2 transition-transform w-fit">
+                            View Case Study <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 2: Adobe Express -->
+                <article class="group flex flex-col bg-dark-surface/50 backdrop-blur-md border border-dark-border rounded-2xl overflow-hidden hover:border-accent-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.1)] transition-all duration-300">
+                    <div class="h-60 bg-dark-bg relative overflow-hidden border-b border-dark-border">
+                        <img src="https://placehold.co/800x600/171717/818cf8?text=Adobe+Express+Training" alt="Adobe Express Training" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="px-3 py-1 text-xs font-semibold bg-accent-600/10 text-accent-400 rounded-full border border-accent-600/20">#AdobeExpress</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-dark-bg text-gray-400 rounded-full border border-dark-border">#InstructionalDesign</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 group-hover:text-accent-400 transition-colors">Adobe Express Training</h3>
+                        <p class="text-gray-400 leading-relaxed mb-8 flex-grow">
+                            A suite of instructional guides and rich media resources created to empower faculty and students. Focused on reducing the technical barrier to entry for digital storytelling and creative communication.
+                        </p>
+                        <a href="case-study.html" class="inline-flex items-center gap-2 text-accent-500 font-semibold group-hover:translate-x-2 transition-transform w-fit">
+                            View Case Study <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 3: Pear Assessment -->
+                <article class="group flex flex-col bg-dark-surface/50 backdrop-blur-md border border-dark-border rounded-2xl overflow-hidden hover:border-accent-500/50 hover:shadow-[0_0_30px_rgba(99,102,241,0.1)] transition-all duration-300">
+                    <div class="h-60 bg-dark-bg relative overflow-hidden border-b border-dark-border">
+                        <img src="https://placehold.co/800x600/171717/818cf8?text=Pear+Assessment" alt="Pear Assessment Evaluations" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex flex-wrap gap-2 mb-5">
+                            <span class="px-3 py-1 text-xs font-semibold bg-accent-600/10 text-accent-400 rounded-full border border-accent-600/20">#PearAssessment</span>
+                            <span class="px-3 py-1 text-xs font-medium bg-dark-bg text-gray-400 rounded-full border border-dark-border">#Evaluation</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 group-hover:text-accent-400 transition-colors">Pear Assessment Practical Evaluations</h3>
+                        <p class="text-gray-400 leading-relaxed mb-8 flex-grow">
+                            Designed and implemented robust, teacher-graded practical tests. This project aimed to bridge the gap between theoretical knowledge and verifiable, competency-based student skill application.
+                        </p>
+                        <a href="case-study.html" class="inline-flex items-center gap-2 text-accent-500 font-semibold group-hover:translate-x-2 transition-transform w-fit">
+                            View Case Study <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Call to Action Footer -->
+    <section class="border-t border-dark-border bg-dark-surface/30 py-20">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Have a project in mind?</h2>
+            <p class="text-gray-400 text-lg mb-8">Whether you need to redesign an existing curriculum or build an innovative learning experience from scratch, I'd love to help.</p>
+            <a href="index.html#contact" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-accent-600 rounded-lg hover:bg-accent-500 transition-colors shadow-[0_0_20px_rgba(99,102,241,0.3)] hover:shadow-[0_0_30px_rgba(99,102,241,0.5)]">
+                Let's Build Something Together
+            </a>
+        </div>
+    </section>
+
+    <!-- Standard Footer -->
+    <footer class="bg-dark-bg border-t border-dark-border py-8 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500">
+            <div>
+                &copy; <script>document.write(new Date().getFullYear())</script> Daniel Barsotti. Designed and hand-coded.
+            </div>
+            <div class="flex gap-6">
+                <a href="#" class="hover:text-accent-400 transition-colors">LinkedIn</a>
+                <a href="#" class="hover:text-accent-400 transition-colors">GitHub</a>
+                <a href="#" class="hover:text-accent-400 transition-colors">Twitter / X</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
